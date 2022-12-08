@@ -6,4 +6,7 @@
 	INSERT INTO tb_board (TITLE, CONTENT) VALUES (#{title}, #{content});
 </insert>
 
+<select id="getBoard" resultType="BoardDTO">
+	SELECT * FROM tb_board;
+</select>
 </mapper>

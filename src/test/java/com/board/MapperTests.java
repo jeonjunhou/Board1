@@ -24,8 +24,8 @@ public class MapperTests {
 		//m1.setId("mr.jang");
 		//m1.setPhone("000-111-1212");
 		
-		b1.setTitle("안녕하세요.반갑습니다.");
-		b1.setContent("첫 테스트 글 입니다. 잘들어갔나요???");
+		b1.setTitle("두번째 테스트 입니다.");
+		b1.setContent("제발 한번에 잘 들어가자");
 		
 		System.out.println( b1 );
 		boardMapper.insertBoard(b1);

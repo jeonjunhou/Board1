@@ -1,31 +1,14 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org>
+<html>
 <head>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <meta charset="UTF-8">
 <title>Insert title here</title>
 </head>
 <body>
 
-	<header>헤더 부분</header>
-	<main></main>
-	<footer>풋터 부분</footer>
+
 
 </body>
-<script>
-	$(document).ready(function() {
-	      $.ajax({
-	        type: "POST",
-	        url: "localhost:8024/boardMain",
-	        dataType: "text",
-	        error: function() {
-	          console.log('통신실패!!');
-	        },
-	        success: function(data) {
-	          console.log("통신데이터 값 : " + data);
-	        }
-	      });
-	    });
-</script>
+
 
 </html>
