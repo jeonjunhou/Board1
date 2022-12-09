@@ -9,7 +9,7 @@ import com.board.dto.BoardDTO;
 @Mapper
 public interface BoardMapper {
 
-	public void insertBoard(BoardDTO boardDTO);
+	public boolean insertBoard(BoardDTO boardDTO);
 	public List<BoardDTO> getBoard();
 	
 }

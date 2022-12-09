@@ -6,6 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.board.dto.BoardDTO;
 import com.board.service.BoardService;
@@ -26,6 +28,28 @@ public class BoardController {
 		model.addAttribute("list", list);
 		
 		return "/board/mainboard";
+	}
+	
+	@GetMapping("/goboardwrite")
+	public String goBoardWrite() {
+		
+		System.out.println("goBoardWrite()");
+		
+		return "/board/boardwrite";
+	}
+	
+	@PostMapping("/boardwrite")
+	public String insertBoard(@RequestParam("formData") BoardDTO boardDTO) {
+		
+		System.out.println("insertBoard()");
+		
+		boolean b = bservice.insertBoard(boardDTO);
+		
+		if (b) {
+			return "YES";
+		} else {
+			return "NO";
+		}
 	}
 	
 }

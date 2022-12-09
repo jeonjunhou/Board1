@@ -19,4 +19,9 @@ public class BoardServiceImpl implements BoardService {
 		return bmapper.getBoard();
 		
 	}
+	
+	public boolean insertBoard(BoardDTO boardDTO) {
+		
+		return bmapper.insertBoard(boardDTO);
+	}
 }

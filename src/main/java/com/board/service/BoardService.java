@@ -9,5 +9,6 @@ import com.board.dto.BoardDTO;
 @Service
 public interface BoardService {
 
+	public boolean insertBoard(BoardDTO boardDTO);
 	public List<BoardDTO> getBoard();
 }

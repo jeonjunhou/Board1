@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+
+	<form id="frm" method="POST">
+			
+			<label for="title">제목 : </label>
+			<input type="text" id="title" name="title"><br><br>
+			
+			<label for="content">내용 : </label>
+			<textarea rows="10px" cols="50px" id="content" name="content"></textarea><br><br>
+			
+			<input type="submit" id="btn" value="저장">
+		
+	</form>
+
+</body>
+<script type="text/javascript">
+
+	console.log(form_data);
+	
+	let form_data = new FormData($("#frm"));
+	
+	
+	$.ajax({
+		url:"localhost:8024/boardwrite",
+		type:"POST",
+		data:form_data,
+		success:function(resp){
+		//	alert('success');
+		
+			if(resp == "YES"){
+				alert('추가되었습니다');
+				location.href = "localhost:8024/getboard";
+			}else{
+				alert('추가되지 않았습니다');
+			}			
+		},
+		error:function(){
+			alert('error');
+		}
+	});
+
+
+
+</script>
+</html>
